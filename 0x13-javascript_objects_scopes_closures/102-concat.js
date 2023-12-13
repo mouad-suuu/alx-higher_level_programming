@@ -1,25 +1,6 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-if (process.argv.length !== 5) {
-  console.error('Usage: ./102-concat.js fileA fileB fileC');
-  process.exit(1);
-}
-
-const fileAPath = process.argv[2];
-const fileBPath = process.argv[3];
-const fileCPath = process.argv[4];
-
-try {
-  const contentA = fs.readFileSync(fileAPath, 'utf-8');
-  const contentB = fs.readFileSync(fileBPath, 'utf-8');
-  const concatenatedContent = contentA + contentB;
-
-  fs.writeFileSync(fileCPath, concatenatedContent);
-  console.log(
-    `Files ${fileAPath} and ${fileBPath} have been concatenated into ${fileCPath}`
-  );
-} catch (error) {
-  console.error(`Error: ${error.message}`);
-  process.exit(1);
-}
+const fArg = fs.readFileSync(process.argv[2]).toString();
+const sArg = fs.readFileSync(process.argv[3]).toString();
+fs.writeFileSync(process.argv[4], fArg + sArg);
