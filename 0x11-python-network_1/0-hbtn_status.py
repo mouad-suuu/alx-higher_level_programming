@@ -13,3 +13,4 @@ if __name__ == '__main__':
         print("\t- content: {}$".format(content))
         print("\t- utf8 content: {}$" .format(content.decode('utf-8')))
 
+
