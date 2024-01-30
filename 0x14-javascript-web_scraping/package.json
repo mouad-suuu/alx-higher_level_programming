@@ -10,7 +10,7 @@
     "semistandard": "*"
   },
   "scripts": {
-    "test": "npm run lint && node 0-readme.js",
+    "test": "npm run lint && node 0-readme.js cisfun",
     "lint": "semistandard"
   },
   "keywords": [],
