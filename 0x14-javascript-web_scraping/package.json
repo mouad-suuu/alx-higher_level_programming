@@ -6,9 +6,11 @@
   "dependencies": {
     "babel-eslint": "^10.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "semistandard": "*"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && node 0-readme.js",
     "lint": "semistandard"
   },
   "keywords": [],
